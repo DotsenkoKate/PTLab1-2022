@@ -6,6 +6,7 @@ import os.path
 from CalcRating import CalcRating
 from TextDataReader import TextDataReader
 from JsonReader import JsonReader
+from DebtStudent import DebtStudent
 
 
 def get_path_from_arguments(args) -> str:
@@ -32,6 +33,9 @@ def main():
 
     rating = CalcRating(students).calc()
     print("Rating: ", rating)
+
+    debt = DebtStudent(students).calc()
+    print("Have Debt: ", debt)
 
 
 if __name__ == "__main__":

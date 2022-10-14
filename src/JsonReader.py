@@ -5,6 +5,7 @@ from Types import DataType
 
 import json
 
+
 class JsonReader(DataReader):
 
     def read(self, path: str) -> DataType:

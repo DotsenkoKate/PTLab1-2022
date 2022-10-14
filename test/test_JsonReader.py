@@ -6,6 +6,9 @@ from src.JsonReader import JsonReader
 
 class TestJsonReader:
 
+    def __init__(self):
+        pass
+
     @pytest.fixture()
     def file_and_data_content(self) -> tuple[str, DataType]:
         text = ('{'

@@ -34,10 +34,9 @@ def main():
     rating = CalcRating(students).calc()
     print("Rating: ", rating)
 
-    
     debt = DebtStudent(students).calc()
     print("Have Debt: ", debt)
-    
- 
+
+
 if __name__ == "__main__":
     main()

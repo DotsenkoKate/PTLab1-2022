@@ -3,13 +3,13 @@ from src.Types import DataType
 from src.DebtStudent import DebtStudent
 import pytest
 
-RatingsType = dict[str, float]
+ResultType = dict[str, float]
 
 
 class TestDebtStudent:
 
     @pytest.fixture()
-    def input_data(self) -> tuple[DataType, RatingsType]:
+    def input_data(self) -> tuple[DataType, ResultType]:
         data = {
             'Иванов Иван Иванович': [
                 ('геометрия', 60),
@@ -30,18 +30,16 @@ class TestDebtStudent:
             ]
         }
 
-        result = [3]
+        result = 2
 
         return data, result
 
+    def test_init(self, input_data: tuple[DataType, ResultType]):
+        debt = DebtStudent(input_data[0])
 
-def test_init(self, input_data: tuple[DataType, RatingsType]):
-    debt = DebtStudent(input_data[0])
+        assert debt.data == input_data[0]
 
-    assert debt.data == input_data[0]
+    def test_calc(self, input_data: tuple[DataType, ResultType]):
+        result = DebtStudent(input_data[0]).calc()
 
-
-def test_calc(self, input_data: tuple[DataType, RatingsType]):
-    result = DebtStudent(input_data[0]).calc()
-
-    assert result == input_data[1]
+        assert result == input_data[1]

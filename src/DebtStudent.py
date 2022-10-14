@@ -1,6 +1,6 @@
 from Types import DataType
 
-RatingType = dict[str, float]
+ResultType = dict[str, float]
 
 
 class DebtStudent:
@@ -8,7 +8,7 @@ class DebtStudent:
     def __init__(self, data: DataType) -> None:
         self.data: DataType = data
 
-    def calc(self) -> RatingType:
+    def calc(self) -> ResultType:
         count = 0
 
         for key in self.data:

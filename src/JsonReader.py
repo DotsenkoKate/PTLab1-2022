@@ -1,8 +1,10 @@
+from _distutils_hack import override
 # -*- coding: utf-8 -*-
 from DataReader import DataReader
 from Types import DataType
 
 import json
+
 
 class JsonReader(DataReader):
 

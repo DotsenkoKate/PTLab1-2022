@@ -34,12 +34,14 @@ class TestDebtStudent:
 
         return data, result
 
-def test_init(self, input_data: tuple[DataType, RatingsType]):
-        debt = DebtStudent(input_data[0])
 
-        assert debt.data == input_data[0]
+def test_init(self, input_data: tuple[DataType, RatingsType]):
+    debt = DebtStudent(input_data[0])
+
+    assert debt.data == input_data[0]
+
 
 def test_calc(self, input_data: tuple[DataType, RatingsType]):
-        result = DebtStudent(input_data[0]).calc()
+    result = DebtStudent(input_data[0]).calc()
 
-        assert result == input_data[1]
+    assert result == input_data[1]
